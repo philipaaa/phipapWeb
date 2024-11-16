@@ -1,8 +1,6 @@
 /*
 
-Tooplate 2120 Ben Resume
-
-https://www.tooplate.com/view/2120-ben-resume
+Phipaps Personal Website
 
 */
 
@@ -31,10 +29,10 @@ https://www.tooplate.com/view/2120-ben-resume
   }
 
   :root {
-    --primary-color:        #ffd500;
-    --white-color:          #ffffff;
-    --dark-color:           #010101;
-    --menu-bg-color:        #212529;
+    --primary-color:        #b2d1d4;  /*ffd500*/
+    --white-color:          #faf9f7;  /*ffffff*/
+    --dark-color:           #f2d88b;   /*010101*/
+    --menu-bg-color:        #4484b2;    /* 212529*/
 
     --gray-color:           #909090;
     --p-color:              #7d7a7a;
