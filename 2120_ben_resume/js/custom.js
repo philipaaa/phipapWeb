@@ -22,34 +22,24 @@
         }               
     });
 
-    // TESTIMONIALS CAROUSEL
-    $('#testimonials-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            900:{
-                items:2,
-            },
-            1200:{
-                items:3,
-                loop:false
-            }
-        }
-    })
-
     // SMOOTHSCROLL
     $(function() {
       $('.navbar .nav-link').on('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 49
-        }, 1000);
-        event.preventDefault();
+        var target = $anchor.attr('href');
+
+        if (target.startsWith('#') && $(target).length) {
+          $('html, body').stop().animate({
+              scrollTop: $(target).offset().top - 70
+          }, 800);
+          event.preventDefault();
+        }
       });
     });   
-     
+
+    // Ensure the navbar shadow updates on load
+    if ($(window).scrollTop() > 72) {
+        $(".navbar").addClass("scroll");
+    }
+
   });
